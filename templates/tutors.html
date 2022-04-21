@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HELP
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Tutor</th>
+            <th class="text-end">Subject(s)</th>
+            <th class="text-end">Email</th>
+            <th class="text-end">Timing and Where</th>
+            <th class="text-end">About them</th>
+            <th class="text-end">Date posted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tutor in tutors %}
+        <tr>
+            <form action="/hire" method="post"> <!--TO DO-->
+                <td class="text-start" name="name" >{{ tutor.name }}</td>
+                <td class="text-end" name="subjects" >{{ tutor.subject }}</td>
+                <td class="text-end" name="email">{{ tutor.email }}</td>
+                <td class="text-end" name="timing">{{ tutor.timing }}</td>
+                <td class="text-end"name="AboutU">{{ tutor.Aboutthem }}</td>
+                <td class="text-end" name="Date" >{{ tutor.Date }}</td>
+                <td class="text-end">
+                        <button class="btn btn-primary" type="submit">Ask for Help</button>
+                </td>
+         </form>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

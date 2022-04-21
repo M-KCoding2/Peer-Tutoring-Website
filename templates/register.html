@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    REGISTER
+{% endblock %}
+
+{% block main %}
+<header>{{reply}}</header>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input name="username" required="required" autofocus class="form-control mx-auto w-auto" type="text">
+        </div>
+        <!-- <div class="mb-3">
+            <input name="email" required="required" autofocus class="form-control mx-auto w-auto" type="text">
+        </div> -->
+        <div class="mb-3">
+            <input name="password" required="required" autofocus class="form-control mx-auto w-auto" type="text">
+        </div>
+        <div class="mb-3">
+            <input name="confirmation"  required="required" autofocus class="form-control mx-auto w-auto" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <p>{{reply}}</p>
+{% endblock %}

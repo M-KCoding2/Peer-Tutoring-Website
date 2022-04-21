@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tutor Sign up
+{% endblock %}
+
+{% block main %}
+    <form action="/regtutor" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" required="required" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email (Verification not inputted yet)" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" required="required" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Name" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" required="required" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" required="required" id="Subject(s)" name="subjects" placeholder="What do you want to teach?" type="text">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="timing" name="timing" placeholder="timing and where" type="text" rows="2"></textarea>
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="About yourself" name="AboutU" placeholder="About yourself" type="text"" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </form>
+
+    <p>{{reply}}</p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    PAYMENTS
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Tutor</th>
+            <th class="text-end">Subject(s)</th>
+            <th class="text-end">Email</th>
+            <th class="text-end">Timing and Where</th>
+            <th class="text-end">About them</th>
+            <th class="text-end">Date posted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if empty==False %}
+            {% for tutor in tutors %}
+            <tr>
+                <td class="text-start" name="name">{{ tutor.name }}</td>
+                <td class="text-end" name="subjects">{{ tutor.subject }}</td>
+                <td class="text-end" name="email">{{ tutor.email }}</td>
+                <td class="text-end" name="timing">{{ tutor.timing }}</td>
+                <td class="text-end"name="AboutU">{{ tutor.Aboutthem }}</td>
+                <td class="text-end" name="Date">{{ tutor.Date }}</td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+
+    </tbody>
+</table>
+<p>hello there</p>
+{% endblock %}
